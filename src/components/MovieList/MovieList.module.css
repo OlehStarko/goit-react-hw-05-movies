@@ -1,0 +1,30 @@
+/* .MovieList__Container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 20px 0;
+} */
+.MovieList__Img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* .MovieList {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(100% / 4 - 20px);
+
+  list-style: none;
+  color: #fff;
+} */
+.MovieList__Text {
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}

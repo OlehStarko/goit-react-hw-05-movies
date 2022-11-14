@@ -1,0 +1,15 @@
+.vote {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px;
+  border-radius: 5px;
+
+  color: #ffffff;
+  background-color: red;
+}
+
+.vote--top {
+}
+.vote--low {
+}
