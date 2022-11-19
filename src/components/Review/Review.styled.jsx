@@ -23,3 +23,7 @@ export const ReviewDescription = styled.p`
   line-height: 22px;
   text-align: left;
 `;
+export const ErrorMassage = styled.h3`
+  text-align: center;
+  color: #fff;
+`;

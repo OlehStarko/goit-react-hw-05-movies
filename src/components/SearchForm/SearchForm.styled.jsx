@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 
 export const SearchFormContainer = styled.div`
   display: flex;
@@ -71,4 +72,9 @@ export const MovieListItem = styled.li`
   margin-bottom: 32px;
   float: left;
   list-style: none;
+`;
+export const StyledLink = styled(NavLink)`
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
 `;

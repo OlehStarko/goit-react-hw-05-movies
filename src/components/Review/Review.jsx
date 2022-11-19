@@ -7,6 +7,7 @@ import {
   ReviewContainer,
   ReviewAuthor,
   ReviewDescription,
+  ErrorMassage,
 } from './Review.styled';
 
 const Reviews = () => {
@@ -26,7 +27,7 @@ const Reviews = () => {
     ));
   }
 
-  return <p>No reviews here!</p>;
+  return <ErrorMassage>No reviews here!</ErrorMassage>;
 };
 
 export default Reviews;

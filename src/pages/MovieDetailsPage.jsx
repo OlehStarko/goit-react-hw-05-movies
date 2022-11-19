@@ -1,10 +1,9 @@
-import { Outlet, useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { Outlet, useParams, useLocation } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
 import { fetchMovieId } from '../components/services/api';
 import {
   MovieDetailsPageContainer,
   MovieDetailsPageImgAndCastContainer,
-  MovieDetailsPageGoBackButton,
   MovieDetailsPageImg,
   MovieDetailsPageCastReviewContainer,
   StyledLink,
@@ -21,11 +20,8 @@ const MovieDetailsPage = () => {
   const [movies, setMovies] = useState(null);
   const { movieId } = useParams();
   const IMG_REGUEST = 'https://image.tmdb.org/t/p/w342';
-  const navigate = useNavigate();
-
-  const navigateHome = () => {
-    navigate('/');
-  };
+  const location = useLocation();
+  const navigation = useRef(location);
 
   useEffect(() => {
     fetchMovieId(movieId).then(setMovies);
@@ -40,9 +36,9 @@ const MovieDetailsPage = () => {
       <>
         <MovieDetailsPageContainer>
           <MovieDetailsPageImgAndCastContainer>
-            <MovieDetailsPageGoBackButton onClick={navigateHome}>
+            <StyledLink to={navigation.current.state?.from || '/movies'}>
               Back
-            </MovieDetailsPageGoBackButton>
+            </StyledLink>
             <MovieDetailsPageImg src={IMG_REGUEST + poster_path} alt={title} />
             <MovieDetailsPageCastReviewContainer>
               <StyledLink to={'cast'}>Cast</StyledLink>

@@ -38,3 +38,14 @@ export const fetchMovieReviews = async id => {
     return response.data.results;
   } catch {}
 };
+export const getMoviesByWord = async word => {
+  try {
+    const response = await axios.get(`/search/movie`, {
+      params: {
+        api_key: API_KEY,
+        query: word,
+      },
+    });
+    return response.data.results;
+  } catch {}
+};

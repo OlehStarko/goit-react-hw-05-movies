@@ -24,3 +24,8 @@ export const CastImg = styled.img`
   width: 176px;
   border-radius: 10px;
 `;
+
+export const ErrorMassage = styled.h3`
+  text-align: center;
+  color: #fff;
+`;
